@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height:100px; width:100px; background:red " id="box1"></div>
+    <div style="height:100px; width:100px; background:blue " id="box2"></div>
+    <div>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        
+
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        gsap.to("#box1", {
+            duration: 2,
+            delay: 2,
+            
+            x: 800,
+            rotation: 360,
+            repeat:1,
+            yoyo:true
+        });
+
+        gsap.to("#box1", {
+            duration: 2,
+            delay: 2,
+             x: 800,
+            ease: "bounce.out"
+        });
+
+        gsap.to("h1", {
+            y: 30,
+            delay:1,
+            duration:1,
+            stagger:0.5
+        });
+    </script>
+</body>
+
+</html>

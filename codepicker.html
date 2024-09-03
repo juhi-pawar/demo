@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0e3e8;
+        }
+    </style>
+    <title>Country Picker</title>
+</head>
+<body class="bg-gray-200 font-sans">
+    <section class="py-10">
+        <div class="container mx-auto text-center">
+            <div class="mb-5">
+                <h4>
+                    <a href="https://intl-tel-input.com/" target="_blank" class="text-blue-500">
+                        Country Code Selection
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <div class="flex justify-center">
+                <div class="w-full max-w-md mt-5 mb-5">
+                    <div class="bg-white shadow-md p-10 rounded-lg">
+                        <div class="w-full">
+                            <form>
+                                <div class="mb-4">
+                                    <input type="text" class="form-control block w-full h-auto p-4 text-base text-gray-700 bg-white border border-gray-300 rounded focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" placeholder="First Name" />
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" class="form-control block w-full h-auto p-4 text-base text-gray-700 bg-white border border-gray-300 rounded focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" placeholder="Last Name" />
+                                </div>
+                                <div>
+                                    <label for="Phone" class="block text-sm font-semibold leading-6 text-gray-900">Phone Number</label>
+                                    <div class="mt-2.5">
+                                      <input type="tel" name="Phone" id="Phone" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-light sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+                                <div class="mb-4 mt-4">
+                                    <input type="text" class="form-control block w-full h-auto p-4 text-base text-gray-700 bg-white border border-gray-300 rounded focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" placeholder="Email">
+                                </div>
+                                <button type="submit" class="btn bg-blue-500 text-white p-4 rounded w-full">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#Phone").intlTelInput({
+                initialCountry: "us",
+                separateDialCode: true
+            });
+        });
+    </script>
+</body>
+</html>
